@@ -1,10 +1,31 @@
 const GITHUB_USERNAME = "GaurangPandey2912";
+const BACKEND_URL = ""; // Set this after deploying: "https://your-app.vercel.app"
+
+async function fetchFromBackend(endpoint) {
+    if (!BACKEND_URL) return null;
+    try {
+        const response = await fetch(`${BACKEND_URL}/api/${endpoint}`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return await response.json();
+    } catch {
+        return null;
+    }
+}
+
+async function fetchFromGitHub(endpoint) {
+    const url = endpoint === "repos"
+        ? `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=10`
+        : `https://api.github.com/users/${GITHUB_USERNAME}/events?per_page=5`;
+
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return await response.json();
+}
 
 async function fetchGitHubRepos() {
     try {
-        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=10`);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const repos = await response.json();
+        let repos = await fetchFromBackend("repos");
+        if (!repos) repos = await fetchFromGitHub("repos");
 
         const repoList = document.getElementById("repo-list");
         repoList.innerHTML = repos.slice(0, 3).map(repo => `
@@ -22,12 +43,11 @@ async function fetchGitHubRepos() {
 
 async function fetchGitHubActivity() {
     try {
-        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/events?per_page=5`);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const events = await response.json();
+        let events = await fetchFromBackend("activity");
+        if (!events) events = await fetchFromGitHub("activity");
 
         const activityList = document.getElementById("activity-list");
-        activityList.innerHTML = events.map(event => {
+        activityList.innerHTML = events.slice(0, 5).map(event => {
             let action = "";
             if (event.type === "PushEvent") action = "Pushed to";
             else if (event.type === "CreateEvent") action = "Created";

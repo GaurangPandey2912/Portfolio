@@ -6,3 +6,4 @@
 .Trashes
 node_modules/
 projects/config.js
+.vercel
