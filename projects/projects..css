@@ -198,7 +198,8 @@ nav ul li a:hover::after {
     margin-bottom: 10px;
 }
 
-.project-list > li h3 a {
+.project-list > li h3 a:link,
+.project-list > li h3 a:visited {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -215,7 +216,8 @@ nav ul li a:hover::after {
     font-size: 1.1rem;
 }
 
-.project-list > li h3 a:hover {
+.project-list > li h3 a:hover,
+.project-list > li h3 a:active {
     background: #FFD700;
     color: #0a0a0a;
     border-color: #FFD700;
