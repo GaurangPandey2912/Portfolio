@@ -188,6 +188,11 @@ nav ul li a:hover::after {
     padding: 30px 20px 40px;
     background-color: #0a0a0a;
     color: #FFD700;
+    max-width: 850px;
+    margin: 0 auto;
+    border: 2px solid rgba(255, 215, 0, 0.25);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.05);
 }
 
 .skills h2 {
@@ -214,7 +219,7 @@ nav ul li a:hover::after {
 
 .skill-card {
     background: linear-gradient(145deg, #141414, #1a1a1a);
-    border: 1px solid #2a2a2a;
+    border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 16px;
     padding: 28px 15px 22px;
     text-align: center;
@@ -249,12 +254,11 @@ nav ul li a:hover::after {
 }
 
 .skill-card img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     margin-bottom: 12px;
     transition: transform 0.4s ease;
-    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.2));
 }
 
 .skill-card:hover img {
@@ -270,6 +274,8 @@ nav ul li a:hover::after {
 
 #certifications {
     padding: 40px 20px;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 #certifications h2 {
@@ -286,10 +292,14 @@ nav ul li a:hover::after {
 }
 
 .sectioncert {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.03), transparent);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.03), rgba(10, 10, 10, 0.9)),
+                url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
     border-radius: 20px;
-    padding: 20px;
-    border: 1px solid rgba(255, 215, 0, 0.1);
+    padding: 25px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.03);
 }
 
 .cert-grid {
@@ -366,10 +376,17 @@ nav ul li a:hover::after {
 }
 
 #resume {
-    background: #0a0a0a;
     text-align: center;
-    padding: 50px 40px;
-    color: #FFD700;
+    padding: 40px 30px;
+    margin: 30px auto;
+    max-width: 800px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.03), rgba(10, 10, 10, 0.9)),
+                url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.05);
 }
 
 #resume h2 {
@@ -384,16 +401,22 @@ nav ul li a:hover::after {
     text-transform: uppercase;
 }
 
+.resume-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
 .qr-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
     padding: 30px;
     border-radius: 16px;
     border: 1px solid rgba(255, 215, 0, 0.2);
     background: rgba(0, 0, 0, 0.5);
-    max-width: 300px;
+    max-width: 220px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -401,6 +424,28 @@ nav ul li a:hover::after {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
     border-color: #FFD700;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: #FFD700;
+    color: #0a0a0a;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 1px solid #FFD700;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+.download-btn:hover {
+    background: transparent;
+    color: #FFD700;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
 }
 
 .social-links {
@@ -437,4 +482,40 @@ footer {
     padding: 20px;
     font-size: 0.9rem;
     border-top: 1px solid rgba(255, 215, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+    #about-me {
+        padding: 25px 20px;
+        margin: 15px 10px;
+    }
+    #about-me h2 {
+        font-size: 1.6rem;
+    }
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+    .skill-card {
+        padding: 20px 10px;
+    }
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+    .modal-content {
+        width: 95%;
+    }
+    #resume {
+        padding: 25px 15px;
+        margin: 20px 10px;
+    }
+    #resume h2 {
+        font-size: 1.4rem;
+    }
 }

@@ -1,58 +1,36 @@
-const username = "GaurangPandey2912";
-// Fetch Repositories
 async function fetchGitHubRepos() {
     try {
-        const response = await fetch("http://localhost:3000/repos");
+        const headers = {};
+        if (GITHUB_CONFIG.token) headers["Authorization"] = `Bearer ${GITHUB_CONFIG.token}`;
+        const response = await fetch(`https://api.github.com/users/${GITHUB_CONFIG.username}/repos?sort=updated&per_page=10`, { headers });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const repos = await response.json();
 
-        console.log("Repos:", repos); // DEBUG
-
         const repoList = document.getElementById("repo-list");
-
-        // 🚨 If API failed
-        if (!Array.isArray(repos)) {
-            repoList.innerHTML = "<li>Failed to load repos</li>";
-            console.error(repos);
-            return;
-        }
-
-        // 🚨 If empty
-        if (repos.length === 0) {
-            repoList.innerHTML = "<li>No repositories found</li>";
-            return;
-        }
-
-        repoList.innerHTML = repos.map(repo => `
+        repoList.innerHTML = repos.slice(0, 3).map(repo => `
             <li>
-                <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+                <a href="${repo.html_url}" target="_blank">
+                    <i class="fab fa-github"></i> ${repo.name}
+                </a>
             </li>
         `).join("");
-
     } catch (error) {
         console.error("Repo Fetch Error:", error);
-        document.getElementById("repo-list").innerHTML = "<li>Error loading repos</li>";
+        document.getElementById("repo-list").innerHTML = "<li>Could not load repos</li>";
     }
 }
 
-// Fetch Activity
 async function fetchGitHubActivity() {
     try {
-        const response = await fetch("http://localhost:3000/activity");
+        const headers = {};
+        if (GITHUB_CONFIG.token) headers["Authorization"] = `Bearer ${GITHUB_CONFIG.token}`;
+        const response = await fetch(`https://api.github.com/users/${GITHUB_CONFIG.username}/events?per_page=5`, { headers });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const events = await response.json();
 
-        console.log("Events:", events); // DEBUG
-
         const activityList = document.getElementById("activity-list");
-
-        if (!Array.isArray(events)) {
-            activityList.innerHTML = "<li>Failed to load activity</li>";
-            console.error(events);
-            return;
-        }
-
-        activityList.innerHTML = events.slice(0, 5).map(event => {
+        activityList.innerHTML = events.map(event => {
             let action = "";
-
             if (event.type === "PushEvent") action = "Pushed to";
             else if (event.type === "CreateEvent") action = "Created";
             else if (event.type === "ForkEvent") action = "Forked";
@@ -61,23 +39,20 @@ async function fetchGitHubActivity() {
 
             return `
                 <li>
-                    ${action} 
+                    ${action}
                     <a href="https://github.com/${event.repo.name}" target="_blank">
                         ${event.repo.name}
                     </a>
                 </li>
             `;
         }).join("");
-
     } catch (error) {
         console.error("Activity Fetch Error:", error);
-        document.getElementById("activity-list").innerHTML = "<li>Error loading activity</li>";
+        document.getElementById("activity-list").innerHTML = "<li>Could not load activity</li>";
     }
 }
 
-// Run after page loads
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("JS Loaded"); // DEBUG
     fetchGitHubRepos();
     fetchGitHubActivity();
 });

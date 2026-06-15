@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Gaurang Pandey</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     <link rel="stylesheet" href="styleshome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -26,16 +27,6 @@
             </div>
         </div>
     </section>
-</section>
-<section id="intro-strip">
-    <div class="intro-content">
-        <p>Hi, This is Gaurang, And on this website you can find more About Me and what I have Achieved.</p>
-        <div class="intro-buttons">
-            <a href="../projects/projects.html" class="btn">View Projects</a>
-            <a href="../aboutme/aboutme.html" class="btn">About Me</a>
-        </div>
-    </div>
-</section>
 
     <section id="blog">
         <h2>My Blog</h2><br>
@@ -74,14 +65,32 @@
         </div>
     </section>
     
-    
-   
+    <section id="quick-stats">
+        <div class="stats-row">
+            <div class="stat-item">
+                <span class="stat-number">12+</span>
+                <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">8+</span>
+                <span class="stat-label">Skills</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Contests</span>
+            </div>
+        </div>
+    </section>
 
     <script>
 function updateGreeting() {
             const now = new Date();
             const hour = now.getHours();
-            let greetingText = "Hello, Gaurang";
+            let greetingText;
 
             if (hour >= 5 && hour < 12) {
                 greetingText = "Good Morning";
@@ -91,7 +100,7 @@ function updateGreeting() {
                 greetingText = "Good Evening";
             }
 
-            document.getElementById("greeting").textContent = greetingText;
+            document.getElementById("greeting").textContent = greetingText + ", I'm Gaurang";
         }
 
         updateGreeting();
@@ -111,7 +120,7 @@ function updateGreeting() {
             }
         });
     </script>
-</body>
+
 <footer>
     <section id="socials">
         <div class="social-links">
@@ -120,6 +129,9 @@ function updateGreeting() {
             </a>
             <a href="https://www.linkedin.com/in/gaurang-pandey-977263176/" target="_blank" aria-label="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:gaurangpandey29@gmail.com" target="_blank" aria-label="Email">
+                <i class="fas fa-envelope"></i>
             </a>
         </div>
     </section>
