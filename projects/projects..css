@@ -486,6 +486,17 @@ footer {
         gap: 10px;
         padding: 15px;
     }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    nav ul li {
+        margin: 0 8px;
+    }
+    nav ul li a {
+        font-size: 15px;
+    }
     #experience {
         padding: 25px 15px;
         margin: 20px 10px;

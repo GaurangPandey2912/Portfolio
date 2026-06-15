@@ -1,8 +1,8 @@
+const GITHUB_USERNAME = "GaurangPandey2912";
+
 async function fetchGitHubRepos() {
     try {
-        const headers = {};
-        if (GITHUB_CONFIG.token) headers["Authorization"] = `Bearer ${GITHUB_CONFIG.token}`;
-        const response = await fetch(`https://api.github.com/users/${GITHUB_CONFIG.username}/repos?sort=updated&per_page=10`, { headers });
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=10`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const repos = await response.json();
 
@@ -22,9 +22,7 @@ async function fetchGitHubRepos() {
 
 async function fetchGitHubActivity() {
     try {
-        const headers = {};
-        if (GITHUB_CONFIG.token) headers["Authorization"] = `Bearer ${GITHUB_CONFIG.token}`;
-        const response = await fetch(`https://api.github.com/users/${GITHUB_CONFIG.username}/events?per_page=5`, { headers });
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/events?per_page=5`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const events = await response.json();
 

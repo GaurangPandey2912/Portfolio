@@ -39,8 +39,7 @@ Personal portfolio website showcasing projects, skills, certifications, and comp
 ├── projects/
 │   ├── projects.html          # Projects page
 │   ├── projects..css          # Projects page styles
-│   ├── script.js              # Fetches GitHub repos + activity
-│   └── config.js              # GitHub username + token (gitignored)
+│   └── script.js              # Fetches GitHub repos + activity
 ├── *.html                     # Blog posts (casual + professional)
 └── backend/                   # Legacy Node.js backend (unused)
 ```
@@ -57,21 +56,9 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000` in your browser.
 
-### GitHub API Token (Optional)
+### GitHub API
 
-Without a token, GitHub API allows 60 requests/hour. Add a token for 5000/hour:
-
-1. Generate a token at https://github.com/settings/tokens (no scopes needed)
-2. Open `projects/config.js` and set your token:
-
-```js
-const GITHUB_CONFIG = {
-    token: "ghp_your_token_here",
-    username: "GaurangPandey2912"
-};
-```
-
-> `config.js` is in `.gitignore` and will never be committed.
+Repos and activity are fetched via the unauthenticated GitHub API (60 requests/hour). The username is hardcoded in `projects/script.js` — no token needed for a personal portfolio.
 
 ## Deployment
 
@@ -96,7 +83,7 @@ GitHub automatically provisions a free SSL certificate.
 - **Colors**: All gold accents use `#FFD700` — search and replace in CSS files
 - **Social links**: Update URLs in the `<section id="socials">` footer of each HTML page
 - **Email**: Change `gaurangpandey29@gmail.com` across all pages
-- **GitHub username**: Update in `projects/config.js`
+- **GitHub username**: Update `GITHUB_USERNAME` in `projects/script.js`
 
 ## Tech
 
