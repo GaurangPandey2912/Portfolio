@@ -110,9 +110,20 @@ nav ul li a:hover::after {
     gap: 20px;
 }
 
-.experience-list li, .project-list > li {
+.experience-list li {
     flex: 1 1 calc(33.33% - 20px);
     min-width: 260px;
+    padding: 24px;
+    background: rgba(255, 215, 0, 0.06);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.project-list > li {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 280px;
     padding: 24px;
     background: rgba(255, 215, 0, 0.06);
     border: 1px solid rgba(255, 215, 0, 0.15);
@@ -193,38 +204,7 @@ nav ul li a:hover::after {
     font-size: 0.95rem;
 }
 
-.project-list li ul {
-    list-style: none;
-    padding: 0;
-}
 
-.project-list li ul li {
-    padding: 14px 16px;
-    margin: 10px 0;
-    background: rgba(255, 215, 0, 0.04);
-    border-left: 3px solid rgba(255, 215, 0, 0.3);
-    border-radius: 0 10px 10px 0;
-    color: #e0d5a0;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    transition: all 0.3s;
-}
-
-.project-list li ul li:hover {
-    background: rgba(255, 215, 0, 0.08);
-    border-left-color: #FFD700;
-    transform: translateX(4px);
-}
-
-.project-list li ul li a {
-    color: #FFD700;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.project-list li ul li a:hover {
-    text-decoration: underline;
-}
 
 #github-stats {
     text-align: center;
@@ -521,6 +501,10 @@ footer {
         flex-direction: column;
     }
     .experience-list li, .project-list > li {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+    .project-list > li {
         flex: 1 1 100%;
         min-width: unset;
     }

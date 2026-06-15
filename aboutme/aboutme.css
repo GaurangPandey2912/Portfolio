@@ -304,7 +304,7 @@ nav ul li a:hover::after {
 
 .cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 15px;
 }
@@ -312,7 +312,7 @@ nav ul li a:hover::after {
 .cert-tile {
     text-align: center;
     cursor: pointer;
-    padding: 20px 15px;
+    padding: 24px 15px;
     border-radius: 14px;
     background: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 215, 0, 0.15);
@@ -320,10 +320,23 @@ nav ul li a:hover::after {
     backdrop-filter: blur(5px);
 }
 
+.cert-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
 .cert-tile p {
-    font-weight: 600;
-    color: #e0d5a0;
-    font-size: 0.95rem;
+    font-weight: 700;
+    color: #FFD700;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.cert-org {
+    font-size: 0.85rem;
+    color: rgba(255, 215, 0, 0.6);
+    font-weight: 500;
 }
 
 .cert-tile:hover {
@@ -333,8 +346,8 @@ nav ul li a:hover::after {
     background: rgba(255, 215, 0, 0.08);
 }
 
-.cert-tile:hover p {
-    color: #FFD700;
+.cert-tile:hover .cert-org {
+    color: rgba(255, 215, 0, 0.9);
 }
 
 .modal {
