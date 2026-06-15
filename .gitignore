@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+.DS_Store?*
+._*
+.Spotlight-V100
+.Trashes
+projects/config.js

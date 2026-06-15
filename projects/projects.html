@@ -4,7 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="projects..css">
-    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js"></script>
 
 </head>
 <body>
@@ -12,14 +13,18 @@
         <h1>Gaurang Pandey</h1>
         <nav>
             <ul>
-                <li><a href="/Protfolio/homepage/homepage.html">Home</a></li>
-                <li><a href="/Protfolio/aboutme/aboutme.html">About</a></li>
+                <li><a href="../homepage/homepage.html">Home</a></li>
+                <li><a href="../aboutme/aboutme.html">About</a></li>
             </ul>
         </nav>
     </header>
     <section id="experience">
         <h2>My Experience</h2>
         <ul class="experience-list">
+            <li>
+                <h3>Software Developer Intern at EverestIMS</h3>
+                <p>Working on sharding strategies, Elasticsearch concurrency, and network optimization to improve system performance and scalability.</p>
+            </li>
             <li>
                 <h3>Marketing Lead At Shiksha NGO</h3>
                 <p>Worked as a Marketing Lead and contributed to Grow the reach of the NGO in the correct direction.</p>
@@ -32,12 +37,15 @@
         <ul class="project-list">
             <li>
                 <h3>Projects</h3>
-                <p>Developed various projects in AI/ML & Full-Stack Development. Notable projects include:</p>
+                <p>Developed various projects in AI/ML & Full-Stack Development:</p>
                 <ul>
-                    <li><strong>Hand Gesture Recognition</strong> - A software model that helps detect hand gestures using TensorFlow and Mediapipe.</li>
-                    <li><strong>Fake News Detection</strong> - Using BERT and SVM developed a model that is trained on a vast dataset to predict fake news.</li>
-                    <li><strong>Library Seat Reservation System</strong> - A Complete website that allows the user to select seats at a library as per their requirements And also issue books in the library.</li>
-                    <li><strong>Smart Code Profiler</strong> - a tool designed to analyze and optimize code performance.</li>
+                    <li><strong>Chess Coach</strong> - Explainable AI chess analyzer using Stockfish with LIME-based move explanations. Streamlit app for PGN analysis and Flask app with interactive board showing material balance, king safety, pawn structure, and tactical analysis.</li>
+                    <li><strong>Smart Code Profiler</strong> - Web app that profiles Python code (execution time, memory usage, complexity) and auto-optimizes via AST transformation — replaces loops with comprehensions, suggests improvements, with React + Flask backend.</li>
+                    <li><strong>Image Encryption</strong> - Combines Arnold's Cat Map scrambling with Paillier homomorphic encryption. Streamlit UI simulates packet-level transmission using Ford-Fulkerson max-flow with animated GIF visualizations.</li>
+                    <li><strong>Music Genre Classification</strong> - CNN trained on mel-spectrograms to classify 10 music genres. Flask web app with Grad-CAM visualization, test-time augmentation, and mixup training.</li>
+                    <li><strong>NewsRator</strong> - Personalized daily news aggregator. Users select topics, system filters via sentence-transformers, summarizes with fine-tuned BART, and delivers daily email digests.</li>
+                    <li><strong>Library Seat Reservation System</strong> - Real-time seat booking and book issuing system with React frontend and Firebase backend, including admin inventory management.</li>
+                    <li><strong>Walia Chair Shop</strong> - Full-stack e-commerce site with product listings, cart, checkout, login/signup, and light/dark theme toggle — built with Node.js, Express, and MongoDB.</li>
                 </ul>
             </li>
         </ul>
@@ -92,12 +100,11 @@
 <footer>
     <section id="socials">
         <div class="social-links">
-            <a href="https://github.com/GaurangPandey2912" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="30px" alt="GitHub">
+            <a href="https://github.com/GaurangPandey2912" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
             </a>
-            
-            <a href="https://www.linkedin.com/in/gaurang-pandey-977263176/" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="30px" alt="LinkedIn">
+            <a href="https://www.linkedin.com/in/gaurang-pandey-977263176/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
             </a>
         </div>
     </section>

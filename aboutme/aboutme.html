@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Gaurang Pandey</title>
     <link rel="stylesheet" href="aboutme.css">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
@@ -13,23 +13,21 @@
     <h1>Gaurang Pandey</h1>
     <nav>
         <ul>
-            <li><a href="/Protfolio/homepage/homepage.html">Home</a></li>
-            <li><a href="/Protfolio/projects/projects.html">Projects</a></li>
+            <li><a href="../homepage/homepage.html">Home</a></li>
+            <li><a href="../projects/projects.html">Projects</a></li>
         </ul>
     </nav>
 </header>
 
 <section id="about-me">
     <h2>About Me</h2>
-    <p>Hi, I'm Gaurang Pandey, a passionate developer with a strong interest in various technologies. I graduated from St. Francis' College, Lucknow, and am now a sophomore at Vellore Institute of Technology, Chennai, pursuing a B.Tech in Computer Science and Engineering with a specialization in AI and ML.
-<br>
-<br>
-        I'm a fast learner who loves picking up new skills and knowledge. In my free time, I enjoy playing football and volleyball, which keep me active and teach me teamwork.</p>
+    <p>Hi, I'm Gaurang Pandey — a final year Computer Science student at Vellore Institute of Technology, Chennai, specializing in AI & ML. I'm passionate about building full-stack applications, exploring machine learning, and solving problems through clean, efficient code.</p>
+    <p>Currently interning at EverestIMS, working on distributed systems, Elasticsearch concurrency, and sharding strategies. I enjoy turning complex problems into simple, elegant solutions.</p>
     <ul class="about-list">
-        <li class="animate left">🚀 Passionate about coding and problem-solving</li>
-        <li class="animate right">📚 Enthusiastic learner, always exploring new tech</li>
-        <li class="animate left">💻 Skilled in C++, Python, JavaScript, and more</li>
-        <li class="animate right">🔗 Interested in Web Development and Machine Learning</li>
+        <li class="animate show" data-icon="🚀">Passionate about coding and problem-solving</li>
+        <li class="animate show" data-icon="📚">Enthusiastic learner, always exploring new tech</li>
+        <li class="animate show" data-icon="💻">Skilled in C++, Python, JavaScript, and more</li>
+        <li class="animate show" data-icon="🔗">Interested in Web Development and Machine Learning</li>
     </ul>
 </section>
 
@@ -118,12 +116,11 @@ new QRCode(document.getElementById("qrcode"), "https://docs.google.com/document/
 
 <section id="socials">
     <div class="social-links">
-        <a href="https://github.com/GaurangPandey2912" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="30px" alt="GitHub">
+        <a href="https://github.com/GaurangPandey2912" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
         </a>
-        
-        <a href="https://www.linkedin.com/in/gaurang-pandey-977263176/" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="30px" alt="LinkedIn">
+        <a href="https://www.linkedin.com/in/gaurang-pandey-977263176/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
         </a>
     </div>
 </section>
@@ -132,19 +129,9 @@ new QRCode(document.getElementById("qrcode"), "https://docs.google.com/document/
     <p>&copy; 2025 Gaurang Pandey. All rights reserved.</p>
 </footer>
 
-<script>
+    <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                } else {
-                    entry.target.classList.remove("show");
-                }
-            });
-        }, { threshold: 0.2 });
-
-        document.querySelectorAll(".animate").forEach(el => observer.observe(el));
+        document.querySelectorAll(".animate").forEach(el => el.classList.add("show"));
     });
     document.querySelectorAll(".cert-tile").forEach(tile => {
         tile.addEventListener("click", function () {

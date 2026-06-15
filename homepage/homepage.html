@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Gaurang Pandey</title>
-        <link rel="stylesheet" href="styleshome.css">
-
+    <link rel="stylesheet" href="styleshome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
         <h1>Gaurang Pandey</h1>
         <nav>
             <ul>
-                <li><a href="/Protfolio/aboutme/aboutme.html">About</a></li>
-                <li><a href="/Protfolio/projects/projects.html">Projects</a></li>
+                <li><a href="../aboutme/aboutme.html">About</a></li>
+                <li><a href="../projects/projects.html">Projects</a></li>
             </ul>
         </nav>
     </header>
@@ -26,6 +26,17 @@
             </div>
         </div>
     </section>
+</section>
+<section id="intro-strip">
+    <div class="intro-content">
+        <p>Hi, This is Gaurang, And on this website you can find more About Me and what I have Achieved.</p>
+        <div class="intro-buttons">
+            <a href="../projects/projects.html" class="btn">View Projects</a>
+            <a href="../aboutme/aboutme.html" class="btn">About Me</a>
+        </div>
+    </div>
+</section>
+
     <section id="blog">
         <h2>My Blog</h2><br>
         <button id="toggle-btn" class="toggle-btn">Switch to Casual</button>
@@ -50,7 +61,7 @@
             <h3>Professional Blogs</h3>
             <a href="optimizing-react-performance.html" class="blog-link">
                 <div class="blog">
-                    <h4>Optimizing React Performance:&nbsp; <br></h4>
+                    <h4>Optimizing React Performance:&nbsp;</h4>
                     <p>Here are some advanced techniques to boost React performance...</p>
                 </div>
             </a>
@@ -61,36 +72,34 @@
                 </div>
             </a>
         </div>
-        
     </section>
     
     
    
 
     <script>
-        function updateGreeting() {
+function updateGreeting() {
             const now = new Date();
             const hour = now.getHours();
             let greetingText = "Hello, Gaurang";
-    
+
             if (hour >= 5 && hour < 12) {
                 greetingText = "Good Morning";
             } else if (hour >= 12 && hour < 18) {
                 greetingText = "Good Afternoon";
-            } else{
+            } else {
                 greetingText = "Good Evening";
             }
-    
+
             document.getElementById("greeting").textContent = greetingText;
         }
-    
+
         updateGreeting();
-    </script>
-    <script>
+
         document.getElementById("toggle-btn").addEventListener("click", function () {
             let casualBlogs = document.getElementById("casual-blogs");
             let professionalBlogs = document.getElementById("professional-blogs");
-    
+
             if (professionalBlogs.classList.contains("hidden")) {
                 professionalBlogs.classList.remove("hidden");
                 casualBlogs.classList.add("hidden");
@@ -101,25 +110,20 @@
                 this.textContent = "Switch to Professional";
             }
         });
-        
     </script>
-    
-    
 </body>
-
-    <footer>
-        <section id="socials">
-            <div class="social-links">
-                <a href="https://github.com/GaurangPandey2912" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="30px" alt="GitHub">
-                </a>
-                
-                <a href="https://www.linkedin.com/in/gaurang-pandey-977263176/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="30px" alt="LinkedIn">
-                </a>
-            </div>
-        </section>
-        <br>
-        <p>&copy; 2025 Gaurang Pandey. All rights reserved.</p>
-    </footer>
+<footer>
+    <section id="socials">
+        <div class="social-links">
+            <a href="https://github.com/GaurangPandey2912" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/gaurang-pandey-977263176/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </section>
+    <br>
+    <p>&copy; 2025 Gaurang Pandey. All rights reserved.</p>
+</footer>
 </html>
