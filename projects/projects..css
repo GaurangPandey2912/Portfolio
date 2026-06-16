@@ -370,19 +370,16 @@ nav ul li a:hover::after {
 .project-list{
     list-style: none;
     padding: 0;
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
 }
 .project-list li{
-    flex: 1 1 calc(50% - 20px); 
     padding: 24px;
-    margin: 12px;
     background: linear-gradient(145deg, rgba(255, 215, 0, 0.03), rgba(255, 215, 0, 0.06));
     border: 1px solid rgba(255, 215, 0, 0.12);
     border-radius: 12px;
     transition: all 0.3s ease;
-    min-width: 45%;
 }
 .project-list li h3 {
     font-size: 18px;
