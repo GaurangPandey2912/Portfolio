@@ -70,189 +70,239 @@ nav ul li a:hover::after {
 }
 #github-stats {
     text-align: center;
-    padding: 40px;
-    margin: 50px auto;
-    max-width: 800px;
-    background: rgba(255, 215, 0, 0.1);
-    border: 2px solid #FFD700;
-    border-radius: 10px;
-    position: relative;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    padding: 40px 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.03), rgba(10, 10, 10, 0.9)),
+                url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.05);
 }
-#github-stats::before {
-    content: "GitHub Overview";
-    position: absolute;
-    top: -12px;
-    left: 20px;
-    background: black;
-    padding: 5px 10px;
-    font-weight: bold;
+#github-stats h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #FFD700, #ffb300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.streak-card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#github-stats img {
+    max-width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.github-subsection {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.github-subsection h3 {
+    font-size: 1.15rem;
     color: #FFD700;
-    border: 1px solid #FFD700;
-    border-radius: 5px;
-    font-size: 14px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
+
 #repo-list {
     list-style: none;
     padding: 0;
-    text-align: left;
 }
 
 #repo-list li {
-    margin: 10px 0;
+    margin: 6px 0;
 }
 
 #repo-list a {
-    display: block;
-    padding: 10px;
-    background: rgba(255, 215, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 16px;
+    background: rgba(255, 215, 0, 0.06);
+    border: 1px solid rgba(255, 215, 0, 0.1);
     color: #FFD700;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.3s;
-    text-align: center;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s;
+    font-size: 0.95rem;
 }
 
 #repo-list a:hover {
-    background-color: #FFD700;
-    color:black;
-    transform: scale(1.05);
+    background: #FFD700;
+    color: #0a0a0a;
+    transform: translateX(4px);
 }
+
 #activity-list {
     list-style: none;
     padding: 0;
-    text-align: left;
-}
-#activity-list li a {
-    color: #FFD700; 
-    text-decoration: none; 
-}
-
-#activity-list li a:hover {
-    color: black; 
 }
 
 #activity-list li {
-    color:#FFD700;
-    padding: 10px;
-    background: rgba(255, 215, 0, 0.2);
+    padding: 11px 16px;
     margin: 5px 0;
-    border-radius: 5px;
-    transition: 0.3s;
-    list-style: none; 
-    padding-left: 15px;
-    position: relative;
+    background: rgba(255, 215, 0, 0.06);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    color: #e0d5a0;
+    font-size: 0.9rem;
+    transition: all 0.3s;
 }
 
 #activity-list li:hover {
-    background: #FFD700;
-    color: black;
-    transform: scale(1.02);
-    cursor: pointer;
-    left: 0;
+    background: rgba(255, 215, 0, 0.1);
+    transform: translateX(4px);
 }
-#activity-list li:hover a {
-    color: black; 
+
+#activity-list li a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#activity-list li a:hover {
+    text-decoration: underline;
 }
 #codechef {
     text-align: center;
-    padding: 50px 20px;
-    background-image:url(background.jpg);
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 40px auto;
+    padding: 40px 30px;
+    margin: 30px auto;
     max-width: 800px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.03), rgba(10, 10, 10, 0.9)),
+                url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.05);
 }
 
 #codechef h2 {
-    font-size: 28px;
-    color: #ffcc00;
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #FFD700, #ffb300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-#codechef p {
-    font-size: 18px;
-    color: #ffcc00;
-    margin-bottom: 20px;
+#codechef > p {
+    color: #e0d5a0;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #codechef .about-list {
     list-style: none;
     padding: 0;
+    max-width: 550px;
+    margin: 0 auto 25px;
 }
 
 #codechef .about-list li {
-    font-size: 18px;
-    color:#FFD700;
-    
-    background: rgba(255, 215, 0, 0.2);
-    padding: 12px;
-    margin: 10px auto;
-    border-radius: 8px;
-    max-width: 500px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 1s ease-in-out;
+    font-size: 1.05rem;
+    padding: 16px 20px 16px 52px;
+    margin: 12px 0;
+    background: rgba(255, 215, 0, 0.08);
+    border-left: 4px solid rgba(255, 215, 0, 0.5);
+    border-radius: 0 14px 14px 0;
+    transition: all 0.3s ease;
+    position: relative;
+    color: #FFD700;
+    line-height: 1.6;
+    font-weight: 500;
+    text-align: left;
+}
+
+#codechef .about-list li::before {
+    content: attr(data-icon);
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
 }
 
 #codechef .about-list li:hover {
-    background: #FFD700;
-    color: black;
-    transform: scale(1.02);
-    cursor: pointer;
-    left: 0;
+    background: rgba(255, 215, 0, 0.12);
+    border-left-width: 5px;
+    transform: translateX(6px);
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.08);
 }
 
-#codechef .codechef-link {
+.codechef-link {
     display: inline-flex;
     align-items: center;
+    gap: 10px;
     text-decoration: none;
-    background:#FFD700;
-    color: black;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
+    background: #FFD700;
+    color: #0a0a0a;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s;
+    border: 1px solid #FFD700;
 }
 
-#codechef .codechef-link img {
-    margin-right: 10px;
-    width: 30px;
+.codechef-link:hover {
+    background: transparent;
+    color: #FFD700;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
 }
 
-#codechef .codechef-link:hover {
-    color: black;
-}
-.about-list {
-    list-style: none;
-    padding: 0;
-}
-
-.about-list li {
-    font-size: 1.2rem;
-    padding: 10px;
-    margin: 15px 0;
-    background: #000000;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-    opacity: 0;
-    position: relative;
+.codechef-link svg {
+    transition: none;
 }
 
 .animate.left {
     transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
 .animate.right {
     transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
 .animate.show {
     transform: translateX(0);
     opacity: 1;
-}footer {
+}
+
+footer {
     text-align: center;
     color: rgba(255, 215, 0, 0.5);
     padding: 20px;
@@ -335,6 +385,7 @@ nav ul li a:hover::after {
     letter-spacing: 1.5px;
     padding: 5px 18px;
     border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
 }
 
 .experience-list li {
@@ -426,9 +477,16 @@ nav ul li a:hover::after {
     border-radius: 4px;
 }
 #projects h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #FFD700, #ffb300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 .project-list{
     list-style: none;
@@ -443,23 +501,33 @@ nav ul li a:hover::after {
     border: 1px solid rgba(255, 215, 0, 0.12);
     border-radius: 12px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 .project-list li h3 {
     font-size: 18px;
     margin-bottom: 6px;
 }
 .project-list li h3 a {
-    color: #FFD700;
-    text-decoration: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
+    color: #FFD700;
+    text-decoration: none;
+    padding: 6px 16px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    font-size: 1.05rem;
 }
 .project-list li h3 a i {
-    font-size: 20px;
+    font-size: 1.1rem;
 }
 .project-list li h3 a:hover {
-    text-decoration: underline;
+    background: #FFD700;
+    color: #0a0a0a;
+    border-color: #FFD700;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
 }
 .project-list li p {
     color: #e0d5a0;
@@ -467,14 +535,88 @@ nav ul li a:hover::after {
     line-height: 1.6;
 }
 .project-list li:hover{
-    background: rgba(255, 215, 0, 0.1);
-    border-color: rgba(255, 215, 0, 0.35);
+    background: #FFD700;
+    border-color: #FFD700;
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(255, 215, 0, 0.08);
 }
 .project-list li:hover h3 a {
+    background: transparent;
+    border-color: #0a0a0a;
+    color: #0a0a0a;
+}
+.project-list li:hover h3 a:hover {
+    background: #0a0a0a;
     color: #FFD700;
+    border-color: #0a0a0a;
 }
 .project-list li:hover p {
-    color: #e0d5a0;
+    color: #0a0a0a;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    nav ul li {
+        margin: 0 8px;
+    }
+    nav ul li a {
+        font-size: 15px;
+    }
+    #experience {
+        padding: 25px 15px;
+        margin: 20px 10px;
+    }
+    #experience h2 {
+        font-size: 1.5rem;
+    }
+    .experience-list {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .experience-list li {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+    #projects {
+        padding: 25px 15px;
+        margin: 20px 10px;
+    }
+    #projects h2 {
+        font-size: 1.5rem;
+    }
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+    #github-stats {
+        padding: 25px 15px;
+        margin: 20px 10px;
+    }
+    #github-stats h2 {
+        font-size: 1.4rem;
+    }
+    .github-subsection {
+        padding: 15px;
+    }
+    .github-subsection h3 {
+        font-size: 1rem;
+    }
+    .streak-card {
+        padding: 15px;
+    }
+    #codechef {
+        padding: 25px 15px;
+        margin: 20px 10px;
+    }
+    #codechef h2 {
+        font-size: 1.4rem;
+    }
 }
