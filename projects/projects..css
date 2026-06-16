@@ -292,11 +292,29 @@ nav ul li a:hover::after {
 }#experience {
     padding: 50px 20px;
     margin: 50px auto;
-    max-width: 1200px;  
-    background-image: url(background.jpg);
-    border-radius: 10px;
-    border: 2px solid #FFD700;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    max-width: 1200px;
+    background: linear-gradient(145deg, #0d0d0d 0%, #1a1a0a 100%);
+    border-radius: 0 16px 16px 0;
+    border-left: 4px solid #FFD700;
+    border-top: 2px solid rgba(255, 215, 0, 0.2);
+    border-bottom: 2px solid rgba(255, 215, 0, 0.2);
+    border-right: 2px solid rgba(255, 215, 0, 0.1);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.08), inset 0 0 60px rgba(255, 215, 0, 0.02);
+    position: relative;
+}
+#experience::before {
+    content: "EXPERIENCE";
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    background: #0d0d0d;
+    padding: 2px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: rgba(255, 215, 0, 0.4);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 4px;
 }
 
 .experience-list {
@@ -309,42 +327,65 @@ nav ul li a:hover::after {
 
 .experience-list li {
     flex: 1 1 calc(50% - 20px); 
-    padding: 20px;
-    margin: 15px;
-    background: rgba(255, 215, 0, 0.2);
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
+    padding: 24px;
+    margin: 12px;
+    background: rgba(255, 215, 0, 0.04);
+    border: 1px solid rgba(255, 215, 0, 0.12);
+    border-radius: 12px;
+    transition: all 0.3s ease;
     min-width: 45%;
 }
 
 .experience-list li h3 {
     color: #FFD700;
-    font-size: 22px;
+    font-size: 20px;
+    margin-bottom: 6px;
 }
 
 .experience-list li p {
-    font-size: 18px;
-    color: #FFD700;
+    font-size: 15px;
+    color: #e0d5a0;
+    line-height: 1.6;
 }
 
 .experience-list li:hover {
-    background: #FFD700;
-    color: black;
-    transform: scale(1.02);
-    cursor: pointer;
+    background: rgba(255, 215, 0, 0.08);
+    border-color: rgba(255, 215, 0, 0.35);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.08);
 }
 
-.experience-list li:hover h3, .experience-list li:hover p {
-    color: black;
+.experience-list li:hover h3 {
+    color: #FFD700;
+}
+
+.experience-list li:hover p {
+    color: #e0d5a0;
 }
 #projects {
     padding: 50px 20px;
     margin: 50px auto;
     max-width: 1200px;
-    background-image: url(background.jpg);
-    border-radius: 10px;
-    border: 2px solid #FFD700;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    background: radial-gradient(ellipse at 30% 50%, rgba(255, 215, 0, 0.04) 0%, transparent 60%),
+                linear-gradient(180deg, #0a0a0a 0%, #111105 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.06), inset 0 0 80px rgba(255, 215, 0, 0.015);
+    position: relative;
+}
+#projects::before {
+    content: "PROJECTS";
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    background: #0a0a0a;
+    padding: 2px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: rgba(255, 215, 0, 0.4);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 4px;
 }
 #projects h2 {
     text-align: center;
@@ -360,16 +401,45 @@ nav ul li a:hover::after {
 }
 .project-list li{
     flex: 1 1 calc(50% - 20px); 
-    padding: 20px;
-    margin: 15px;
-    background: rgba(255, 215, 0, 0.2);
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
+    padding: 24px;
+    margin: 12px;
+    background: linear-gradient(145deg, rgba(255, 215, 0, 0.03), rgba(255, 215, 0, 0.06));
+    border: 1px solid rgba(255, 215, 0, 0.12);
+    border-radius: 12px;
+    transition: all 0.3s ease;
     min-width: 45%;
 }
+.project-list li h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.project-list li h3 a {
+    color: #FFD700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.project-list li h3 a i {
+    font-size: 20px;
+}
+.project-list li h3 a:hover {
+    text-decoration: underline;
+}
+.project-list li p {
+    color: #e0d5a0;
+    font-size: 14px;
+    line-height: 1.6;
+}
 .project-list li:hover{
-    background: #FFD700;
-    color: black;
-    transform: scale(1.02);
-    cursor: pointer;
+    background: rgba(255, 215, 0, 0.1);
+    border-color: rgba(255, 215, 0, 0.35);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.08);
+}
+.project-list li:hover h3 a {
+    color: #FFD700;
+}
+.project-list li:hover p {
+    color: #e0d5a0;
 }
