@@ -337,14 +337,19 @@ nav ul li a:hover::after {
 .experience-list li:hover h3, .experience-list li:hover p {
     color: black;
 }
-.section-divider {
-    border: 0;
-    height: 2px;
-    background: linear-gradient(to right, transparent, #FFD700, transparent);
-    margin: 30px 0;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+#projects {
+    padding: 50px 20px;
+    margin: 50px auto;
+    max-width: 1200px;
+    background-image: url(background.jpg);
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+#projects h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 .project-list{
     list-style: none;
@@ -362,16 +367,9 @@ nav ul li a:hover::after {
     transition: transform 0.3s ease-in-out;
     min-width: 45%;
 }
-.project-list ul li:hover{
+.project-list li:hover{
     background: #FFD700;
     color: black;
     transform: scale(1.02);
     cursor: pointer;
-}
-.project-link {
-    color: #FFD700;
-    text-decoration: none;
-}
-.project-link:hover {
-    text-decoration: underline;
 }
