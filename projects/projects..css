@@ -4,34 +4,38 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-html, body {
+html {
+    background: black;
+}
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
-}
-
-main {flex: 1;
-    padding-bottom: 100px;
-}
-body {
+    padding-top: 65px;
     background: black;
     color: #FFD700;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
+
+main {flex: 1;
+    padding-bottom: 100px;
+}
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: #FFD700;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
 }
 nav ul {
     list-style: none;
@@ -555,6 +559,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
     header {
         flex-direction: column;
         gap: 10px;
@@ -570,6 +577,7 @@ footer {
     }
     nav ul li a {
         font-size: 15px;
+        padding: 6px 4px;
     }
     #experience {
         padding: 25px 15px;
@@ -585,6 +593,25 @@ footer {
     .experience-list li {
         flex: 1 1 100%;
         min-width: unset;
+        padding: 20px;
+    }
+    .experience-list li.major {
+        padding: 24px 18px;
+    }
+    .experience-list li.major h3 {
+        font-size: 1.1rem;
+    }
+    .experience-list li h3 {
+        font-size: 1rem;
+    }
+    .experience-list li p {
+        font-size: 0.85rem;
+    }
+    .major-badge {
+        font-size: 0.7rem;
+        padding: 4px 14px;
+        top: -10px;
+        right: 14px;
     }
     #projects {
         padding: 25px 15px;
@@ -593,8 +620,24 @@ footer {
     #projects h2 {
         font-size: 1.5rem;
     }
+    #projects::before {
+        right: 15px;
+        font-size: 9px;
+        padding: 2px 10px;
+    }
     .project-list {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .project-list li {
+        padding: 18px;
+    }
+    .project-list li h3 a {
+        font-size: 0.95rem;
+        padding: 5px 12px;
+    }
+    .project-list li p {
+        font-size: 0.85rem;
     }
     #github-stats {
         padding: 25px 15px;
@@ -610,7 +653,15 @@ footer {
         font-size: 1rem;
     }
     .streak-card {
-        padding: 15px;
+        padding: 12px;
+    }
+    #repo-list a {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+    }
+    #activity-list li {
+        font-size: 0.82rem;
+        padding: 10px 12px;
     }
     #codechef {
         padding: 25px 15px;
@@ -618,5 +669,81 @@ footer {
     }
     #codechef h2 {
         font-size: 1.4rem;
+    }
+    #codechef > p {
+        font-size: 0.9rem;
+    }
+    #codechef .about-list li {
+        font-size: 0.9rem;
+        padding: 12px 14px 12px 40px;
+    }
+    .codechef-link {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+    .social-links {
+        gap: 14px;
+    }
+    .social-links a {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 70px;
+    }
+    header {
+        padding: 10px;
+        gap: 6px;
+    }
+    header h1 {
+        font-size: 1.1rem;
+    }
+    nav ul li {
+        margin: 0 4px;
+    }
+    nav ul li a {
+        font-size: 13px;
+    }
+    #experience {
+        padding: 20px 10px;
+        margin: 15px 6px;
+    }
+    #experience h2 {
+        font-size: 1.2rem;
+    }
+    .experience-list {
+        gap: 12px;
+    }
+    .experience-list li {
+        padding: 16px;
+    }
+    #projects {
+        padding: 20px 10px;
+        margin: 15px 6px;
+    }
+    #projects h2 {
+        font-size: 1.2rem;
+    }
+    #github-stats {
+        padding: 20px 10px;
+        margin: 15px 6px;
+    }
+    #github-stats h2 {
+        font-size: 1.2rem;
+    }
+    #codechef {
+        padding: 20px 10px;
+        margin: 15px 6px;
+    }
+    #codechef h2 {
+        font-size: 1.2rem;
+    }
+    footer {
+        font-size: 0.8rem;
+        padding: 15px;
     }
 }

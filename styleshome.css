@@ -20,6 +20,7 @@ header {
     padding: 20px 40px;
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: #FFD700;
     position: fixed;
     width: 100%;
@@ -115,7 +116,6 @@ nav ul li a:hover::after {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1.2;
-    white-space: nowrap;
 }
 
 #blog {
@@ -303,6 +303,9 @@ footer {
     nav ul li a {
         font-size: 15px;
     }
+    #hero {
+        padding: 120px 20px 50px;
+    }
     .hero-content {
         gap: 16px;
     }
@@ -319,5 +322,94 @@ footer {
     }
     #blog {
         padding: 20px;
+    }
+    .blog {
+        padding: 16px 18px;
+    }
+    .blog p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px 10px;
+        gap: 8px;
+    }
+    header h1 {
+        font-size: 1.2rem;
+    }
+    nav ul li {
+        margin: 0 5px;
+    }
+    nav ul li a {
+        font-size: 13px;
+        padding: 6px 4px;
+    }
+    #hero {
+        padding: 110px 12px 40px;
+    }
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+    #greeting {
+        font-size: clamp(0.9rem, 4vw, 1.2rem);
+    }
+    .stats-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .stat-item {
+        padding: 18px 10px;
+    }
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    .stat-label {
+        font-size: 0.75rem;
+    }
+    #blog {
+        padding: 15px;
+        max-width: 95%;
+    }
+    #blog h2 {
+        font-size: 1.3rem;
+    }
+    .blog {
+        padding: 12px 14px;
+        margin: 8px 0;
+        flex-direction: column;
+        gap: 2px;
+    }
+    .blog h4 {
+        font-size: 0.95rem;
+    }
+    .blog p {
+        font-size: 0.85rem;
+    }
+    .toggle-btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+    #quick-stats {
+        padding: 20px 12px 40px;
+        margin: 20px 10px;
+    }
+    .social-links {
+        gap: 14px;
+    }
+    .social-links a {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
     }
 }

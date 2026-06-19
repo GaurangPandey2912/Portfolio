@@ -71,6 +71,54 @@
             transform: scaleX(1);
             transform-origin: left;
         }
+        @media (max-width: 768px) {
+            html, body {
+                padding-top: 80px;
+            }
+            header {
+                padding: 15px;
+                flex-direction: column;
+                gap: 8px;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 5px;
+            }
+            nav ul li {
+                margin: 0 8px;
+            }
+            nav ul li a {
+                font-size: 15px;
+            }
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+            .container h1 {
+                font-size: 1.3rem;
+            }
+        }
+        @media (max-width: 480px) {
+            html, body {
+                padding-top: 70px;
+            }
+            header h1 {
+                font-size: 1.1rem;
+            }
+            nav ul li a {
+                font-size: 13px;
+            }
+            .container {
+                padding: 10px;
+                margin: 8px;
+            }
+            .container h1 {
+                font-size: 1.1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -86,19 +134,19 @@
     <div class="container">
         <h1>The Evolution of AI: Transforming the Future <br><br></h1>
         
-        <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="ai-row" style="display: flex; align-items: center; justify-content: space-between;">
             <img src="images/SK-hynix_All-About-AI_The-Origins-Evolution-Future-of-AI_01.png" alt="AI Evolution" style="width: 50%; border-radius: 10px;">
             <p style="width: 60%; text-align: justify; padding: 0 10px; color: #FFD700;">
                 Artificial Intelligence (AI) has evolved from simple rule-based systems to sophisticated deep learning models capable of decision-making, creativity, and automation. It is reshaping industries, from healthcare to finance, and redefining the way we interact with technology.
             </p>
         </div>
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 20px;">
+        <div class="ai-row" style="display: flex; align-items: center; justify-content: space-between; margin-top: 20px;">
             <p style="width: 60%; text-align: justify; padding: 0 10px; color: #FFD700;">
                 Machine Learning and Neural Networks have enabled AI to surpass human capabilities in areas such as language processing, image recognition, and even creative writing. AI-powered tools like ChatGPT and self-driving cars showcase the rapid progress in this field.
             </p>
             <img src="images/ai2.png" alt="AI in Action" style="width: 50%; border-radius: 10px;">
         </div>
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 20px;">
+        <div class="ai-row" style="display: flex; align-items: center; justify-content: space-between; margin-top: 20px;">
             <img src="images/ai3.jpg" alt="AI and Future" style="width: 50%; border-radius: 10px;">
             <p style="width: 60%; text-align: justify; padding: 0 10px; color: #FFD700;">
                 The future of AI holds both promise and challenges. Ethical concerns, bias in algorithms, and the impact on jobs are major discussion points. However, with responsible development, AI has the potential to enhance human capabilities and improve lives globally.
@@ -109,5 +157,21 @@
             AI is not just a tool; it is a revolution that is still unfolding. How we shape its future will define the next era of human progress.
         </p>
     </div>
+    
+    <style>
+        @media (max-width: 600px) {
+            .ai-row {
+                flex-direction: column !important;
+                gap: 12px;
+            }
+            .ai-row img {
+                width: 80% !important;
+            }
+            .ai-row p {
+                width: 100% !important;
+                padding: 0 !important;
+            }
+        }
+    </style>
 </body>
 </html>
