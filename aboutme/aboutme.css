@@ -405,6 +405,7 @@ nav ul li a:hover::after {
     border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 20px;
     box-shadow: 0 0 40px rgba(255, 215, 0, 0.05);
+    overflow: hidden;
 }
 
 #resume h2 {
@@ -435,7 +436,19 @@ nav ul li a:hover::after {
     border: 1px solid rgba(255, 215, 0, 0.2);
     background: rgba(0, 0, 0, 0.5);
     max-width: 220px;
+    width: fit-content;
+    overflow: hidden;
     transition: all 0.3s ease-in-out;
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+}
+
+#qrcode canvas {
+    max-width: 100%;
+    height: auto;
 }
 
 .qr-container:hover {
@@ -578,7 +591,8 @@ footer {
         font-size: 1.4rem;
     }
     .qr-container {
-        max-width: 180px;
+        max-width: 100%;
+        width: fit-content;
         padding: 20px;
     }
     .download-btn {
@@ -674,7 +688,8 @@ footer {
         gap: 14px;
     }
     .qr-container {
-        max-width: 150px;
+        max-width: 100%;
+        width: fit-content;
         padding: 16px;
     }
     .social-links {

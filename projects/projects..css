@@ -6,6 +6,7 @@
 }
 html {
     background: black;
+    overflow-x: hidden;
 }
 body {
     min-height: 100vh;
@@ -17,6 +18,8 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 main {flex: 1;
@@ -84,6 +87,7 @@ nav ul li a:hover::after {
     border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 20px;
     box-shadow: 0 0 40px rgba(255, 215, 0, 0.05);
+    overflow: hidden;
 }
 #github-stats h2 {
     font-size: 2rem;
@@ -103,10 +107,13 @@ nav ul li a:hover::after {
     padding: 25px;
     margin-bottom: 10px;
     display: inline-block;
+    max-width: 100%;
 }
 
 #github-stats img {
     max-width: 100%;
+    width: 100%;
+    height: auto;
     border-radius: 8px;
     display: block;
 }
@@ -201,6 +208,7 @@ nav ul li a:hover::after {
     border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 20px;
     box-shadow: 0 0 40px rgba(255, 215, 0, 0.05);
+    overflow: hidden;
 }
 
 #codechef h2 {
@@ -290,13 +298,13 @@ nav ul li a:hover::after {
 }
 
 .animate.left {
-    transform: translateX(-100%);
+    transform: translateX(-40px);
     opacity: 0;
     transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
 .animate.right {
-    transform: translateX(100%);
+    transform: translateX(40px);
     opacity: 0;
     transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
@@ -352,6 +360,7 @@ footer {
     border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 20px;
     box-shadow: 0 0 40px rgba(255, 215, 0, 0.05);
+    overflow: hidden;
 }
 
 #experience h2 {
@@ -465,6 +474,7 @@ footer {
     border: 1px solid rgba(255, 215, 0, 0.25);
     box-shadow: 0 0 40px rgba(255, 215, 0, 0.06), inset 0 0 80px rgba(255, 215, 0, 0.015);
     position: relative;
+    overflow: hidden;
 }
 #projects::before {
     content: "PROJECTS";
@@ -734,6 +744,11 @@ footer {
     }
     #github-stats h2 {
         font-size: 1.2rem;
+    }
+    #projects::before {
+        right: 10px;
+        font-size: 8px;
+        padding: 2px 8px;
     }
     #codechef {
         padding: 20px 10px;
